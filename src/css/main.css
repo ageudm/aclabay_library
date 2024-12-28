@@ -1,0 +1,180 @@
+/* **************
+    IMPORTS CSS
+********************* */
+
+
+/* global */
+@import url(global/configuration.css);
+@import url(global/resets.css);
+
+/* utilities */
+@import url(utilities/tipografy.css);
+@import url(utilities/buttons.css);
+@import url(utilities/leyouts.css);
+@import url(utilities/scroll.css);
+
+/* Componets */
+/* Anmation */
+
+
+/* **************
+    HEADER
+********************* */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--clr-light-1);
+    box-shadow: 0 1px 15px hsla(220, 13%, 14%, 0.04);
+
+    .header-container {
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+
+            & .flexbox {
+                gap: .5rem;
+                align-items: center;
+            }
+
+            & .logo-img {
+                width: 1rem;
+                height: 1rem;
+            }
+
+            & .logo-text {
+                font-size: var(--fz-normal);
+            }
+        }
+
+        & svg {
+            fill: var(--clr-dark-2);
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+
+/* **************
+    NAVBAR
+********************* */
+.nav {
+    position: fixed;
+    top: 62px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 62px);
+    background-color: var(--clr-light-1);
+    z-index: -1;
+
+    & .nav-items {
+        padding: 3rem 1rem 2rem;
+
+        .nav-subtitle {
+            font-size: 1rem;
+            color: var(--clr-dark-4);
+            padding-inline: 1rem;
+        }
+
+        .nav-link {
+            padding: .5rem 1rem;
+            border-radius: .5rem;
+            transition: background .5s ease;
+
+            .nav-link-name, .icon {
+                color: var(--clr-dark-2);
+            }
+
+            &:hover {
+                background: var(--clr-light-2);
+            }
+        }
+
+        .nav-dropdown {
+            .nav-dropdown-button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .5rem 1rem;
+                border-radius: .5rem;
+                transition: background 0.5s ease;
+
+                &:hover {
+                    background: var(--clr-light-2);
+                }
+            }
+
+            .icon {
+                transition: transform 0.5s ease;
+            }
+        }
+        
+        .dropdown-content {
+            height: 0;
+            gap: .5rem;
+            padding-bottom: 0;
+            overflow-y: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .nav-dropdown-item {
+            padding-inline: 1.5rem;
+            line-height: 0;
+            opacity: 0;
+            transition: color 0.5s ease;
+
+            &:hover {
+                color: var(--clr-primary-1);
+            }
+        }
+    }
+}
+
+@supports(interpolate-size: allow-keywords) {
+    
+    :root {
+        interpolate-size: allow-keywords;
+    }
+    
+    .nav-dropdown.open {
+        border-radius: .5rem;
+        background: var(--clr-light-2);
+
+        & .icon {
+            transform: rotate(180deg);
+            transition: transform 0.5s ease;
+        }
+        
+        & .dropdown-content {
+            height: auto;
+            padding-bottom: 1rem;
+            overflow: clip;
+            transition: height 0.5s ease;
+            
+            .nav-dropdown-item {
+                line-height: initial;
+                opacity: 1;
+                transition: all .5s ease;
+            }
+        }
+    }
+}
+
+
+/* **************
+    MAIN CONTENT
+********************* */
+.man {
+    position: absolute;
+}
+
+/* **************
+    PAGES
+********************* */

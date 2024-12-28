@@ -1,0 +1,181 @@
+/* **************
+    CONTAINER AND SECTION
+********************* */
+@layer container {
+    .container, .container-fluid {
+        margin: 0 auto;
+        padding: 0 1rem;
+        /* margin-inline: 1.5rem; */
+    }
+
+    .container {
+        max-width: var(--container-lg);
+    }
+
+    .container-fluid {
+        max-width: var(--full-width);
+    }
+
+    .section {
+        padding: 5rem 0;
+    }
+}
+
+/* **************
+    FLEXBOX
+********************* */
+@layer flexbox {
+    .flexbox {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+        align-items: start;
+    }
+
+    .column-left {
+        flex-basis: 30ch;
+        flex-grow: 1;
+    }
+
+    .column-rigth {
+        flex-basis: 30ch;
+        flex-grow: 1;
+    }
+
+    .flex-b {
+        flex-basis: 50%;
+    }
+
+    .flex-g {
+        flex-grow: 1;
+    }
+}
+
+/* **************
+    GRID COLUMNS
+********************* */
+@layer gridleyout {
+    .columns, 
+    .column-auto-fit,
+    .column-min-auto-fit,
+    .column-auto-flow,
+    .side-leyout,
+    .galery,
+    .metros {
+        display: grid;
+        gap: 1rem;
+    }
+
+    /* base de colunas */
+    .column-1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* auto columns */
+    .column-auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+    }
+
+    .column-min-auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+    }
+
+    /* para scroll left */
+    .column-auto-flow {
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(25ch, 1fr);
+        /* grid-auto-columns: 25%; */
+    }
+
+    /* Side main */
+    .side-leyout {
+        grid-template-columns: minmax(125px, 25%) 1fr;
+    }
+
+    /*base para criar grid galery*/
+    .galery {
+        /* grid-template-columns: 2fr 1fr 1fr; */
+        grid-template-columns: repeat(3, 1fr);
+
+        & .coloumn-span {
+            grid-row: auto / span 2;
+        }
+    }
+
+    /* base para criar metro menu */
+    .metros {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: dense;
+
+        & .coloumn-span:nth-child(1) {
+            grid-row: auto / span 2;
+        }
+
+        & .coloumn-span:nth-child(even) {
+            grid-column: auto / span 2;
+        }
+    }
+
+    .card-auto-height
+    {
+        display: grid;
+        padding: 1rem;
+        gap: 1rem;
+
+        & .button {
+            margin-top: auto;
+        }
+    }
+
+    .container-hero {
+        overflow: auto;
+    }
+}
+
+/* **************
+    BREACKPOINTS
+********************* */
+@media screen and (min-width: 640px) {
+    .column-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .column-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .column-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .column-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    .column-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media  screen and (max-width: 775px) {
+
+    .side-leyout {
+        grid-template-columns: minmax(125px, 100%) 1fr;
+    }
+
+    .side-leyout .column-left {
+        display: none;
+    }
+}
+

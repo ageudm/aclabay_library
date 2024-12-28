@@ -1,0 +1,23 @@
+/* **************
+    RSTRUTURA DA BIBLIOTECA
+********************* */
+
+- **SELECTORS AVANÇADOS E ESPECIFICIDADE**
+- **CORES, BACKGROUND GRADIENT E FILTER**
+- **SHADOWS**
+- **BOX MODEL**
+- **LAYOUTS**
+- **TRANSITIONS**
+- **TRANSFORMS**
+- **ANCHOR CSS
+- **ANIMATIONS**
+- **SPECIFISITY & PREFIXES**
+- **MEDIA QUERIES**
+- **SCROLLBAR
+
+
+- **BEM & SMACSS**
+    - **CONFIGURAÇÃO**
+    - **RESETS**
+    - **UTILITS**
+    - **COMPONETS**

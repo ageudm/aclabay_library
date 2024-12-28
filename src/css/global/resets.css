@@ -1,0 +1,48 @@
+/* **************
+    ELEMENTOS BASE
+********************* */
+@layer reset {
+    *, ::before, ::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--ff-body);
+        font-size: var(--fz-normal);
+        line-height: var(--lh-normal);
+        color: var(--clr-dark-2);
+        background-color: var(--clr-light-2);
+        transition: var(--transition-5s);
+
+    }
+
+    input, button {
+        border: none;
+        outline: none;
+    }
+
+    ul, li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--clr-dark-2);
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    svg {
+        width: 24px;
+    }
+}

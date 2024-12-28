@@ -1,0 +1,14 @@
+/* **************
+    ELEMENTOS BASE
+********************* */
+
+@layer scrollSnap {
+    .scroll-snap {
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        /* scroll-padding: 1rem; */
+        /* scroll-padding-inline: 1rem; */
+        scroll-padding-right: 1rem;
+        scroll-padding-left: 1rem;
+    }
+}

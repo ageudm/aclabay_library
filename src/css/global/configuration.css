@@ -1,0 +1,81 @@
+/* **************
+    WEB FONTS
+****************************** */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+/* **************
+    VARIAVEIS E CONFIGURAÇÃO
+****************************** */
+@layer configuration {
+    :root {
+        /* color */
+        --clr-primary-1: hsl(349, 83%, 58%);
+        --clr-primary-2: hsl(45, 100%, 58%);
+
+        --clr-light-1: hsl(0, 0%, 100%);
+        --clr-light-2: hsl(0, 0%, 99%);
+
+        --clr-dark-1: hsl(0, 0%, 7%);
+        --clr-dark-2: hsl(223, 12%, 14%);
+        --clr-dark-3: hsl(223, 12%, 20%);
+        --clr-dark-4: hsl(223, 12%, 35%);
+
+        /* Shadow */
+        --box-shadow: 0 2px 8px hsla(220, 68%, 12%, .03);
+
+        /* fonts family */
+        --ff-body: "Poppins", sans-serif;
+
+        /* font size */
+        --fz-normal: .938rem;
+        --fz-small: .85rem;
+        --fz-smaller: .75rem; 
+        --fz-h1: 2rem;
+
+        /* font weigth */
+        --fw-normal: normal;
+        --fw-medium: 500;
+        --fw-semi-bold: 600;
+        --fw-bold: 700;
+
+        /* line height */
+        --lh-normal: 1.5;
+
+        /* z-index */
+        --z-tooltip: 10;
+        --z-fixed: 100;
+
+        /* fixed heigt & width */
+        --header-height: 3.5rem;
+
+        /* radius */
+        --border-radius: 10px;
+
+        /* animation */
+        --transition-3s: 0.3s;
+        --transition-5s: 0.5s;
+
+        /* full width*/
+        --full-width: 100%;
+
+        /* Breakpoints & leyout width*/
+        --container-xs: 475px;
+        --container-sm: 640px;
+        --container-md: 768px;
+        --container-lg: 1024px;
+        --container-xl: 1280px;
+        --container-xxl: 1536px;
+    }
+
+
+    /* PARA DESKTOP */
+    @media screen and (min-width: 1024px) {
+        :root {
+        /* font size */
+        --fz-noemal: 1rem;
+        --fz-small: .875rem;
+        --fz-smaller: .813rem;
+        --fz-h1: 2.5rem;
+        }
+    }
+}
