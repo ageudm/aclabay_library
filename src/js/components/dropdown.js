@@ -8,15 +8,15 @@ function Dropdown ({navDropdown, navDropdownButton, navOpen}) {
 
     this.dropdownFunction = () => {
         $$(`${navDropdown}`).forEach((dropdown) => {
-        dropdown.querySelector(`${navDropdownButton}`).addEventListener('click', () => {
-            $$(`${navDropdown}`).forEach((item) => {
-            if(item !== dropdown) {
-                item.classList.remove(`${navOpen}`)
-            }
-            });
+            dropdown.querySelector(`${navDropdownButton}`).addEventListener('click', () => {
+                $$(`${navDropdown}`).forEach((item) => {
+                if(item !== dropdown) {
+                    item.classList.remove(`${navOpen}`)
+                }
+                });
 
-            dropdown.classList.toggle(`${navOpen}`)
-        })
+                dropdown.classList.toggle(`${navOpen}`)
+            })
         })
     }
 }; 

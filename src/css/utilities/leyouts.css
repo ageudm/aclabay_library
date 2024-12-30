@@ -58,7 +58,7 @@
     GRID COLUMNS
 ********************* */
 @layer gridleyout {
-    .columns, 
+    .columns,
     .column-auto-fit,
     .column-min-auto-fit,
     .column-auto-flow,
@@ -70,9 +70,28 @@
     }
 
     /* base de colunas */
-    .column-1 {
+    .column {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    @media screen and (min-width: 640px) {
+        .column {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media screen and (min-width: 768px) {
+        .column {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        .column {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    
 
     /* auto columns */
     .column-auto-fit {
@@ -138,35 +157,7 @@
 /* **************
     BREACKPOINTS
 ********************* */
-@media screen and (min-width: 640px) {
-    .column-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media screen and (min-width: 768px) {
-    .column-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .column-4 {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .column-5 {
-        grid-template-columns: repeat(5, 1fr);
-    }
-}
-
-@media screen and (min-width: 1536px) {
-    .column-6 {
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
 
 @media  screen and (max-width: 775px) {
 
